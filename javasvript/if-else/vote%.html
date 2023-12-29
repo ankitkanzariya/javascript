@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting Meter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #voting-container {
+      text-align: center;
+    }
+
+    .option {
+      margin: 10px;
+    }
+
+    #vote-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #results {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="voting-container">
+  <h1>Vote for Your Favorite Option</h1>
+
+  <form id="voting-form">
+    <label class="option">
+      <input type="radio" name="vote" value="option1"> Option 1
+    </label>
+
+    <label class="option">
+      <input type="radio" name="vote" value="option2"> Option 2
+    </label>
+
+    <label class="option">
+      <input type="radio" name="vote" value="option3"> Option 3
+    </label>
+
+    <button type="button" id="vote-button" onclick="submitVote()">Vote</button>
+  </form>
+
+  <div id="results"></div>
+</div>
+
+<script>
+  
+  let votes = {
+    option1: 0,
+    option2: 0,
+    option3: 0
+  };
+
+  function submitVote() {
+    const selectedOption = document.querySelector('input[name="vote"]:checked');
+
+    if (selectedOption) {
+      votes[selectedOption.value]++;
+      updateResults();
+    } else {
+      alert('Please select an option before voting.');
+    }
+  }
+
+  function updateResults() {
+    const resultsContainer = document.getElementById('results');
+    resultsContainer.innerHTML = '<h2>Results</h2>';
+
+    for (const option in votes) {
+      const percentage = ((votes[option] / Object.values(votes).reduce((a, b) => a + b, 0)) * 100).toFixed(2);
+      resultsContainer.innerHTML += `<p>${option}: ${votes[option]} votes (${percentage}%)</p>`;
+    }
+  }
+
+
+</script>
+
+</body>
+</html>

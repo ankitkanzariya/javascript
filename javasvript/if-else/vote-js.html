@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Voting System</h1>
+
+  <form id="votingForm">
+    <input type='number' id='userInput'>
+    <button type="button" onclick="submitVote()">Submit</button>
+  </form>
+
+  <h3>Result will display here.</h3>
+
+<script>
+
+let button = document.getElementById('button');
+let userInput = document.getElementById('userInput');
+let result = document.querySelector('h3');
+
+function submitVote() {
+    
+  const printValue = parseInt(userInput.value);
+
+  if (isNaN(printValue)) {
+    result.innerHTML = 'Please enter a valid number';
+    console.log('Please enter a valid number');
+  } else if (printValue >= 18 && printValue <= 110) {
+    // result.innerHTML = 'Vote submitted: You are eligible';
+    console.log('You are eligible');
+  } else {
+    result.innerHTML = 'Vote submitted: You are not eligible';
+    console.log('You are not eligible');
+  }
+}
+
+</script>
+
+</body>
+</html>
