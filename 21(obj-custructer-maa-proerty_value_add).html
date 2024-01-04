@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="19.js"></script> -->
+</head>
+<body>
+
+<h6>obj cunstructer 20 ma code ma 6 m niche mujb aaya b bnavel 6 but a student naa function maa aapne obj ane property add kravi 6i protype ni mdd thi</h6>
+    
+
+    <script>
+
+       
+
+        function student(first,last,age,cls){
+            this.firstname = first;
+            this.lastname = last;
+            this.age = age;
+            this.class = cls;
+
+        }
+
+        // student na function ma nationality indian add thy gyu prototype thi...
+
+        //.prototype thi student.prototype.nationality = "indian" lkyu ana thi student name na function nationality no obj ane value assign kre 6 j drek student ne lage 6 khali student1 purtu j ny...
+
+        student.prototype.nationality = "indian";
+       
+        var student1 = new student ("ankit", "kanzariya", 21 , 15);    
+        var student2 = new student ("parag", "gfgf", 21 , 15);       
+        
+        
+        console.log(student1);
+        console.log(student1.nationality);
+        console.log(student2.nationality);
+
+
+
+    </script>
+</body>
+</html>

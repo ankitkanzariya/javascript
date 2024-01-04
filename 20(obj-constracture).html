@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="19.js"></script> -->
+</head>
+<body>
+
+
+    
+
+    <script>
+
+        // student 1 2 na function bnavya ama fname lname ... a badha obj bnavya ne ane properties aapi value asign kri....
+
+        // var student1{                        
+        //     name = "ankit",
+        //     lastname = "kanzariya",
+        //     age : 21,
+        //     class: 15            
+        // }
+
+        // var student2{
+        //     name = "parag",
+        //     lastname = "nakum",
+        //     age : 21,
+        //     class: 5            
+        // }
+
+        // badha same function na bnava hoin to obj class constructur bnavi levu 
+
+        function student(first,last,age,cls){
+            this.firstname = first;
+            this.lastname = last;
+            this.age = age;
+            this.class = cls;
+
+        }
+
+        // obj cunstucter 1 vaar upr mujb bnavi levanu p66i niche lkhyu m call kravanu value assign kri n...
+
+        var student1 = new student ("ankit", "kanzariya", 21 , 15);        
+        
+        //counstructer function ma obj ne value add krva 
+        student1.nationality = "indian";
+
+        //student1 ma method bnavi hoi to....
+        // method bnavi pn a upla cunstructer ma ny lage stud1 na obj ma j lagse
+
+        student1.name = function(){
+            return this.firstname + " " + this.name;
+        }
+
+        console.log(student1);
+
+
+
+    </script>
+</body>
+</html>

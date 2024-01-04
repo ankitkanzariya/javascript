@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h6>nested object </h6>
+    <p> function bnavi ama object ni andar object bnavi ane nested object k y</p>
+
+    <p>user naam nu obj bnavyu </p><p> ani andr personalinfo nu obj bnavyu</p><p>ani andr address nu obj bnavyu</p>
+
+
+
+    <script>
+        var user ={
+            id: 101,
+            email: "ankit@gmail.com",
+            personalinfo:{
+                name: "abc",
+                address:{
+                    street: "street14",
+                    city: "amd",
+                    country : "ind",
+                }
+            }
+        };
+
+        //user nu obj aakhu call kryu
+        console.log(user);
+        //user ni andr personalinfo obj call kryu
+        console.log(user.personalinfo);
+        // user ma p-i ni andr address nu obj call kryu
+        console.log(user.personalinfo.address);
+        //user ni andr p-i ani andr address ani andr city nu object call kravyu
+        console.log(user.personalinfo.address.city);
+
+    </script>
+    
+</body>
+</html>
