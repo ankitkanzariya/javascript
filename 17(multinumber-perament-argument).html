@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<script>
+
+// addition of 2 numbers using 2perameter 2 argument
+
+    // function add(num1,num2){
+    //     document.write(num1 + num2);
+    // }
+    // add(25,58);
+
+// function add name nu bnavyu but argument ktli pass krvi a khbr ny mate arguments.length name nu function 6 j jtla perameter pass krsi a mujb chalse
+
+function add(){
+
+    if(arguments.length == 0){
+        console.log("no arguments passed");
+    }else{
+        let sum = 0;
+        for(let i = 0; i < arguments.length; i++){
+            sum = sum + arguments[i];
+        }
+        console.log(sum);
+        document.write(sum);
+    }
+}
+
+add(5,6,7,8,9);
+
+// let addition ma add name nu function ama store kri nkhyu
+//hve add function j kaam kre aj addition thi b thy ske 6....
+
+let addition = add;
+
+addition(5,7);
+
+</script>
+
+</body>
+</html>

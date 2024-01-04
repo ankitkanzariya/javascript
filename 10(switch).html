@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h5>switch in javascript</h5>
+   <p> if input 1,y,yes       so output = continue.....</p>
+     <p> if input 0,n,no       so output = end.....</p>
+     <br><br><br>
+
+    <script>
+
+        // let input;                  //if else 
+        // input = "0";                //if else no use strick comparison mate j krvo
+        
+        // if(input == 1){
+        //     document.write("continue...");
+        // }else if(input === "y"){
+        //     document.write("continue...");
+        // }else if(input === "yes"){
+        //     document.write("continue...");
+
+        // }else if(input == 0){
+        //     document.write("end...");
+        // }else if(input === "n"){
+        //     document.write("end...");
+        // }else if(input === "no"){
+        //     document.write("end...");
+        // }else{
+        //     document.write("enter valid...");
+        // }
+
+
+        //===comparision
+
+        let input;
+        input = "y";
+
+
+        switch(input){
+
+            case 1:                             // if(input == 1)                
+            case "y":                                            
+            case "yes":                            
+                document.write("continue...");      // if(input == "yes, y,1")
+                break;
+
+            case "0":                               // if(input == "no,n,0")
+            case "n":                            
+            case "no":                            
+                document.write("end...");
+                break;
+
+            default:
+            document.write("enter valid...");
+
+            
+
+        }
+
+    </script>
+</body>
+</html>
