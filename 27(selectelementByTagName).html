@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>select element by tag name:</h3>
+    <p>badhha tag ma 1 sathe change krvaa selectElementByTagName thi thase</p>
+
+    <hr />
+    <br />
+
+    <!-- body ma 3 <h2> aapel 6 ama 2 h2 div ma aapel 6 ane div ne id=div1 aapel 6  -->
+
+    <h2>heading 1</h2>
+
+
+    <div id="div1">
+     
+      <p>pragraph 1</p>
+      <h2>heading 2</h2>
+      <p>pragraph 2</p>
+      <h2>heading 3</h2>
+      <p>pragraph 3</p>
+    </div>
+
+
+    <script>
+
+     // let div1 = document.getElementById("div1") ama let div1 che ama document.getElementById thi "div1" ni id mathi ly ne let div1 ma mukvama aave 6  
+        
+      let div1 = document.getElementById("div1");
+
+     // upr let div1 ma j div1 id mathi h2 aayva ane elm name na variable ma mukya 6....
+      let elm = div1.getElementsByTagName("h2");
+
+    //let i = 0; thi i = element ni length sudhi loop chlavani rese--
+    //ane elm ni loop jya sudhi chalse tya sudhi elm[i] thi loop mujb i chnge thase ane tya .innerhtml thi j change krsu a thase...
+
+      for(let i = 0; i < elm.length; i++){
+        elm[i].innerHTML = "hello ";
+      }
+
+      
+
+    </script>
+  </body>
+</html>

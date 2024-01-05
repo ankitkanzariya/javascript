@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>get element by class:  </h2>
+
+<hr>
+<!-- normal list bnavel 6 -->
+    <ul>
+        <li >list1</li>
+
+        <li >list2</li>
+
+        <li >list3</li>
+    </ul>
+
+    <hr>
+
+<!-- list j class ni mdd thi ama inner.html thi change kri 6i a list -->
+
+    <ul>
+        <li class="cls">list1</li>
+
+        <li >list2</li>
+
+        <li class="cls">list3</li>
+    </ul>
+
+
+    <script>
+        // document.getElementsByClassName("cls") thi cls aapel list ne elm ma store kryu 6
+        let elm = document.getElementsByClassName("cls"); 
+        //console.log(elm.length) thi tema ktla element aayva 6 a check kr lesu...
+        console.log(elm.length);
+
+
+        for(let i = 0; i < elm.length; i++){
+            elm[i].innerHTML = "<p> inner html ni mdd thi change krel 6</p>";
+        }
+
+    </script>
+</body>
+</html>
