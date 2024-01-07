@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+<!-- intro id aapi 1 div bnavyu jema p tag 6 -->
+
+    <div id="intro">
+      <p>Hello this is a p_tag</p>
+      <p id="p1">Hello this is a p tag with p1 id</p>
+
+    </div>
+
+    <script>
+//intro ne elm ma save kryu
+      let elm = document.getElementById("intro");
+
+//"h1" tag banavyo ane h1 name ma save kryo
+      let h1 = document.createElement("h1");
+
+//h1 tag ne class name aapva mate ane id aapva mate
+        h1.className ="try-cls";
+        h1.id = "try-id";
+
+//text name nu variable bnavyo ane document.createTextNode thi ("") ma This is h1 tag... value store kri
+//variable ma text add krva---> let var-name = document.createTextNode("text....");
+      let text = document.createTextNode("This is h1 tag");
+
+//h1 tag ne h1.appendchild(text) lkhi text variable no value ama aapi...
+      h1.appendChild(text);
+
+//h1 ne elm che a div ma leva mate  elm.appendChild(h1);...
+    //  elm.appendChild(h1);          // aa line cucoment krso to div ma h1 jova mlse
+
+h1.textContent = "content added use of textContent...";
+
+// append child ne body ma leva mate 
+ document.body.appendChild(h1);     //aa line ne uncoment krso to div mathi body ma aavi jse
+
+
+
+    </script>
+  </body>
+</html>

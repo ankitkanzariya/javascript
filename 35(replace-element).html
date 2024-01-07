@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>replace</title>
+  </head>
+  <body>
+    <h2>replace element..</h2>
+
+    <ul id="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+
+    <script>
+        
+      let parent = document.getElementById("menu");
+      let item = document.createElement("li");
+      item.textContent = "Services";
+      let replace = parent.firstElementChild.nextElementSibling;
+      parent.replaceChild(item, replace);
+
+    </script>
+  </body>
+</html>

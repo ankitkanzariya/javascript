@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>insert before</h1>
+
+    <p>
+      append class thi jyre ky value add krvi hoi tyare last ma thy te mujab
+      insert before thi value koi value ni pehla k p66i add kri skaay che...
+    </p>
+
+    <p>insertbefore ma add krva perent ni id joi a</p>
+    <p>
+      jya add rvu hoi ani possision joi jm k aani pela joi to aani position joi
+    </p>
+    <p></p>
+    <ul>
+      <!-- insrt before thi aaya kri skaay-->
+      <li>list 1</li>
+      <!-- insrt before thi aaya kri skaay-->
+      <li>list 2</li>
+      <!-- insrt before thi aaya kri skaay-->
+      <li>list 3</li>
+      <!-- insrt before thi aaya kri skaay-->
+      <li>list 4</li>
+      <!-- jyare appendchild thi add kri tyre aaya last ma add thy 6 -->
+    </ul>
+
+    <ul id="list">
+      <li>list..1</li>
+      <li>list..2</li>
+      <li>list..3</li>
+      <li>list..4</li>
+    </ul>
+
+    <script>
+      let list1 = document.getElementById("list"); //parent
+      let item = document.createElement("li"); //li element item name na var ma bnavyo
+      item.textContent = "new list 5"; //item ma new list 5 name story kryu..
+
+      let pos = list1.firstElementChild.nextElementSibling.nextElementSibling;
+      list1.insertBefore(item, pos);
+
+      // jyare list ma ny body ma add krvu hoi tyare...
+
+      let parent = document.body;
+      let elm = document.createElement("h2");
+
+      elm.textContent = "this is new element";
+      let list = document.getElementById("list");
+      parent.insertBefore(elm, list);
+      
+    </script>
+  </body>
+</html>

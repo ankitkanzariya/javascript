@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change atribute</title>
+</head>
+<body>
+    <h3>change atribute</h3>
+    <hr>
+        <ul>
+            <li>get atribute thi attribute aapi skaay</li>
+            <li>remove attribute thi remove kri skaay</li>
+            <li>has attribute thi atribute aapel 6 k ny a joi skaay</li>
+        </ul>
+    <hr>
+    <p>this is btn 1 id=btn name=form1</p>
+    <button id="btn" name="form1">send1</button>
+    <hr>
+    <p>this is btn 2 id=btn2 name=form2</p>
+    <button id="btn2" name="form2">send2</button>
+
+    <script>
+        let btn = document.getElementById("btn");
+
+// btn ne id ni jm name k class attribute add krva
+        //     btn.setAttribute("class","form1");
+
+// btn.getattribute aapso to name ma su aapyu 6 te janave 6...
+// getattribute thi name ne j atribute nu name aapyu hse te jnavse...
+        let val = btn.getAttribute("name");
+        console.log(val);
+
+// remove attribute thi name="form2" aapyu 6 tema j attribute remove krvu hoi tenu name aapi devu jm k form2 remove krvu hoi to 
+        let btn2 = document.getElementById("btn2");
+      //  let val2 = btn2.getAttribute("name"); 
+        let val2 = btn2.removeAttribute("name");
+
+      //  let val2 = btn2.hasAttribute("name");    //has attribute thi jani sky btn2 ma name naam nu atribute aapel 6 k ny
+        console.log(val2);
+
+
+    </script>
+</body>
+</html>

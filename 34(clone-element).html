@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clone</title>
+  </head>
+  <body>
+    <h1>clone element..</h1>
+    <p>aakha element console ma joto hoi child sahit to (true) lakhvu..</p>
+    <p>jyre  .cloneNode() true na lkho to j element lidho hoi aj aave child na aave</p>
+
+    <ul id="menu">
+      <li>Home</li>
+      <li>Services</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+
+    <script>
+
+        let menu = document.getElementById("menu");
+        
+    //      let clone Elm = menu.cloneNode();   //jyre true na lkho to j element lidho hoi aj aave child na aave
+        let cloneElm = menu.cloneNode(true);
+        console.log(cloneElm);
+
+        //clone elm ma id change krva
+        cloneElm.id="mobile";
+
+        //body ma element clone joi a to...        
+        document.body.appendChild(cloneElm);
+
+
+    </script>
+  </body>
+</html>
