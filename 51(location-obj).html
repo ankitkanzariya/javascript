@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>location obj</h1>
+    <li>j hoi a url nu address gotvanu</li>
+    <li>ne bja url pr redirect krvani</li>
+    <p><b>location janvu hoi to</b></p>
+    <ol>
+      <li>console.log(location.href);</li>
+      <li>console.log(location.pathname);</li>
+      <li>console.log(location.protocol);</li>
+    </ol>
+    <hr>
+    <hr>
+    <button id="btn" onclick="fun()">redirect</button>
+
+    <script>
+
+      console.log(location.href);
+      console.log(location.pathname);
+      console.log(location.protocol);
+
+      function fun(){
+        //  window.location = "https://www.google.com";
+       // location.href = "https://www.google.com";
+      // location.assign("https://www.google.com");
+      //location.replace("https://www.google.com");
+      location.reload();
+      }
+
+
+
+    </script>
+  </body>
+</html>

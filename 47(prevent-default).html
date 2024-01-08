@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prevent default</title>
+</head>
+<body>
+    <h1>parent default</h1>
+    <p><b>prevent default</b>--  prevent default thi j link hoi tena pr jata atkave 6....</p>
+
+    <br><br><br> <br><br><br>
+
+    <form action="" id="myform">
+        <input type="text">
+        <input type="submit">
+    </form>
+
+
+    <script>
+        let form = document.getElementById("myform");
+
+        form.addEventListener('submit',function(event){
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>

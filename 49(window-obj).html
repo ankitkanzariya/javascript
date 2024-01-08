@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      body {
+        background-color: red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h2>window object...</h2>
+    <p><b>window object...</b><hr>window obj thi new window kholi sky ane tema niche jm 3 perameter pass krvana hoi 6 jema hoi 6<li>url</li>
+    <li>name</li>
+    <li>feature</li></p>
+
+    <p>
+        <b
+          >idname.addEventListener('event-name',function(){ <br />
+          window.open(url, 'name','features'); <br />
+          }); <br
+        /></b>
+      </p>
+
+    <hr />
+    <p>
+      console kri ne joi lo nanu motu kri ne atle smjase inner hight ne inner
+      width....
+    </p>
+    <li>
+      <b>window.innerHeight</b>--innerhight thi console kholel hoi ty andr ni
+      hight btave
+    </li>
+    <li>
+      <b>window.innerWidth</b>--innerwidth thi console kholel hoi ty andr ni
+      width btave
+    </li>
+    <hr />
+    <hr />
+    <p>
+      <b>
+        let btn1 = document.getElementById("btn1"); <br />
+        let url =
+        "https://c4.wallpaperflare.com/wallpaper/990/547/605/digital-art-futuristic-city-car-artwork-wallpaper-preview.jpg";
+        <br />
+        let features = "height=500,width=500";<br />
+        let = win;      <br><br><br>
+
+        btn1.addEventListener('click',function(){ <br />
+        window.open(url, 'name',features); <br />
+        });</b>      
+    </p>
+
+    <p><b>
+        btn2.addEventListener("click", function () {        <br>
+            window.open('https://www.yahoo.com', "yahoo", features);            <br>
+          });
+    </b></p>
+    <p><b>
+        btn3.addEventListener('click',function(){       <br>
+            win.close               <br>
+          });
+    </b></p>
+
+
+    <br /><br /><br /><br /><br><br>
+
+   <center> <button  id="btn1">google</button>    
+    <button  id="btn2">yahoo</button>
+  <button  id="btn3">close</button>
+</center>
+    <hr><hr>
+
+
+    <script>
+
+// window ma console kholi ani hifgt width jova aane cmntout krvu....
+      //console.log(window.innerHeight);
+      //console.log(window.innerWidth);
+      // console.log(window.outerHeight);
+      // console.log(window.outerWidth);
+
+      let btn1 = document.getElementById("btn1");
+      let btn2 = document.getElementById("btn2");
+      let btn3 = document.getElementById("btn3");
+
+      let url = "https://c4.wallpaperflare.com/wallpaper/990/547/605/digital-art-futuristic-city-car-artwork-wallpaper-preview.jpg";
+      let features = "height=500,width=500";
+
+      btn1.addEventListener("click", function () {
+        window.open(url, "google", features);
+      });
+
+      btn2.addEventListener("click", function () {
+        window.open('https://www.yahoo.com', "yahoo", features);
+      });
+
+      btn3.addEventListener('click',function(){
+        win.close
+      });
+    </script>
+  </body>
+</html>

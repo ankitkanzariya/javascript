@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>timeout & timeInterval</h1>
+    <p><b>timeout--</b>time out function thi jtli vaar ni milisecond nakhel hoi atli vaar p66i chalu thasee....</p>
+    <hr>
+    <p><u>function:----</u></p>
+    <p><b> let timeoutId = setTimeout(myfunction,5000); <br><br>
+
+        function myfunction(){  <br>
+            alert("please subscribe....");      <br>
+        }</b></p>
+
+        <hr><hr><hr><br>
+        <p><b>let t1 = setInterval(fun,2000);   <br><br>
+
+            function fun(){     <br>
+                console.log("please subscribe..."); <br>
+            }       <br>    <br>
+    
+            let btn1 = document.getElementById(btn);    <br>    
+    
+            btn1.addEventListener('click',function(){   <br>
+                clearInterval(t1);          <br>    
+            });</b></p>
+
+        <button id="btn">clear interval</button>
+
+    <script>
+        /////////////////////
+
+        // let timeoutId = setTimeout(myfunction,5000);
+
+        // function myfunction(){
+        //     alert("please subscribe....");
+        // }
+
+        //////////////////
+
+        let t1 = setInterval(fun,2000);
+
+        function fun(){
+            console.log("please subscribe...");
+           // document.write("please subscribe...");
+        }
+
+        let btn1 = document.getElementById(btn);
+
+        btn1.addEventListener('click',function(){
+            clearInterval(t1);
+        });
+
+    </script>
+</body>
+</html>

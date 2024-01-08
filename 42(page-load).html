@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>page load in js...</h1>
+    <p>
+      jm k koi motu page opn kri tyare amuk img k amuk content load thy te aana
+      thi kry ski... jema pela img b load kry ski ane content b aani mdd thi
+    </p>
+    <hr />
+    <ol>
+      <hr />
+      <p>load 2 rite thy ske</p>
+      <li>
+        <b>DOMContentLoaded -</b> – the browser fully loaded HTML and completed
+        building the DOM tree. However, it hasn't loaded external resources like
+        stylesheets and images. In this event, you can start selecting DOM nodes
+        or initialize the interface.
+      </li>
+      <hr />
+      <li>
+        <b>load - </b> the browser fully loaded the HTML and also external
+        resources like images and stylesheets. When you leave the page, the
+        following events fire in sequence:
+      </li>
+    </ol>
+    <hr />
+    <p>jm k aaya niche img aapi 6 moti size ni jn load thy opn thy ty console ma joi skase 2y load event ky rite kaam kre 6...</p>
+    <img src="10mb2.jpg" alt="" width="800">
+    <hr>
+    <p>console kei joi sko 6o loded km kaam kre 6 ne 2y no diff... b joi skase...</p>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        console.log("DOM tree created");
+      });
+      window.addEventListener("load", function () {
+        console.log("Fully loaded");
+      });
+    </script>
+  </body>
+</html>

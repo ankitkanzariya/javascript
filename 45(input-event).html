@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input events</title>
+  </head>
+  <body>
+    <h1>input events</h1>
+    <hr />
+    <p>focus kri ty color change ne blur kri ty normal </p>
+    <p>foucus blur use of addEventListener</p>
+    <p>value change kri te b console kre 6</p>
+    <form action="">
+      <td>name</td>
+      <td><input type="text" id="myInput" /></td>
+    </form>
+
+    <script>
+
+      let x = document.getElementById("myInput");
+      x.addEventListener("focus", myFocusFunction);
+      x.addEventListener("blur", myBlurFunction);      
+
+      function myFocusFunction() {
+        x.style.background = "yellow";
+      }
+      function myBlurFunction() {
+        x.style.background = "white";
+      }
+
+      // focus mathi blur thya p66i j change krsi a mujb consol ma btv se
+      x.addEventListener("change", function () {
+        console.log(this.value);
+      });
+
+    </script>
+  </body>
+</html>

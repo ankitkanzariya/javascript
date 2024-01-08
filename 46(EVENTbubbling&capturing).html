@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event bubbling& capturing</title>
+    <style>
+      body {
+        padding: 100px;
+        background-color: yellow;
+      }
+      #mydiv {
+        background-color: brown;
+        padding: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>event bubbling & capturing</h1>
+    <hr />
+    <ul>
+      <li>
+        ky n lakho true k false to bubbling method mujb chalse child->parent trf
+      </li>
+    </ul>
+    <ol>
+      <li>
+        event bubling:
+        <p>event bubbling ma child thi parent trf event pass thy 6</p>
+        <hr />
+        <hr />
+      </li>
+      <li>
+        event capturing:
+        <p>event capturing ma parent thi child trf event pass thy 6</p>
+        <hr />
+        <hr />
+      </li>
+    </ol>
+
+    <br /><br /><br />
+
+    <div id="mydiv">
+      <button id="btn">click me</button>
+    </div>
+    <script>
+      let d = document.getElementById("mydiv");
+      let b = document.getElementById("btn");
+
+      // aama ky 3ju lkhyu ny to bubbling event mujb chalse.... child to parent------------------------------------------------
+
+      b.addEventListener('click',btnclicked);
+      d.addEventListener('click',divclicked);
+      document.body.addEventListener('click',bodyclicked);
+
+      //aama last ma true lkhyu ti event capturing mujb parent to child thase--------------------------------------------------
+
+    //   b.addEventListener("click", btnclicked, true);
+    //   d.addEventListener("click", divclicked, true);
+    //   document.body.addEventListener("click", bodyclicked, true);
+
+      // function btnclicked(){
+      //     console.log("btn clicked");
+      // }
+      // function divclicked(){
+      //     console.log("div clicked");
+      // }
+      // function bodyclicked(){
+      //     console.log("body clicked");
+      // }
+
+      // ane perent to child atkavu hoi jena pr click kri te 1kj activate re m krvu hoi to
+      function btnclicked(event) {
+        console.log("btn clicked");
+         event.stopPropagation();
+      }
+      function divclicked(event) {
+        console.log("div clicked");
+        event.stopPropagation();
+      }
+      function bodyclicked(event) {
+        console.log("body clicked");
+        event.stopPropagation();
+      }
+    </script>
+  </body>
+</html>

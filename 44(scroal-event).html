@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>scroll event</h1>
+
+    <script>
+      // scrol thy 6 te joi skaay 6
+
+            //   window.addEventListener('scroll', function(){
+            //   console.log("scrolling...");
+            //   });
+
+      //scroll up thy 6 k down te jani skaay 6
+
+            window.addEventListener("wheel", function (event) {
+              if (event.deltaY < 0) {
+                console.log("scrolling up..");
+              } else if (event.deltaY > 0) {
+                console.log("scrolling down..");
+              }
+            });
+
+      //ktla px scroll kryu a jova mate ne body ma changes mate b..
+
+      window.addEventListener('scroll', function(){
+      if(window.pageYOffset>150) {
+      document.body.style.background = "red";
+      }else{
+      document.body.style.background = "White";
+      }
+      });
+    </script>
+  </body>
+</html>

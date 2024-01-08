@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>dom-event....</h2>
+    <p>
+      dom event web page ma user kyk action kre ky event kre a smy a aapnu web
+      page ky react kre tene dom event ky
+    </p>
+    <hr />
+    <h2>dom events..</h2>
+    <p>
+      tmare dom events jovi hoi anu list to go to chrom and type dom event
+      list...
+    </p>
+    <p>1 btn pr 1 thi vadhu event lagavi sky...</p>
+    <ul>
+      <li>When a user clicks the mouse I</li>
+      <li>When a web page has loaded</li>
+      <li>When an image has been loaded</li>
+      <li>When the mouse moves over an element</li>
+      <li>When an input field is changed</li>
+      <li>When an HTML form is submitted</li>
+      <li>When an HTML form is submitted</li>
+      <li>When an HTML form is submitted</li>
+    </ul>
+
+    <hr />
+    <p>btnclick() ni trick thi... j ma function bnavi event apaay..</p>
+    <button id="btn" onclick="btnClick()">click me!</button>
+    <hr />
+    <hr />
+    <p>function banaya vgr ananoumas function thi alert karayu...</p>
+    <p>btn2 ma mouse over ne click 2y event listner aapya 6...</p>
+    <button id="btn2">click me2!</button>
+    <script>
+      function btnClick() {
+        alert("btnclick name na function thi eventpass thy..");
+      }
+
+      // btn 2 mate eventlistner ni trick...
+      let btn2 = document.getElementById("btn2");
+
+      btn2.addEventListener("click", function () {
+        alert("btn2 ma eventlistner thi function 6 jema nu alert aayu");
+      });
+
+      btn2.addEventListener("mouseover", function () {
+        alert("btn2 ma eventlistner thi mouseover activated..");
+      });
+
+      btn2.addEventListener("mouseout", function () {
+        console.log("this is mouseout");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>remove eventlistner..</h1>
+    <hr />
+    <p>
+      remove eventlistner thi 1 thi vadhu el aapel hoi tema thi koi b el remove
+      kr skaay 6
+    </p>
+    <hr />
+    <button id="btn">click me2!</button>
+
+    <script>
+      let btn = document.getElementById("btn");
+
+      function click1() {
+        console.log("click1 activated");
+      }
+      function click2() {
+        console.log("click2 activated");
+      }
+
+      btn.addEventListener("click", click1);
+      btn.addEventListener("click", click1);
+
+      //j event remove krvi hoi te remove krva aam lkhi ne remove kri skaay
+btn.removeEventListener('click',click1);      
+    </script>
+  </body>
+</html>
