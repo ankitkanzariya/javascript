@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        iframe{
+            height: 100vh;
+            width: 100%;
+        }
+    </style> -->
+    <style>
+        /* Sidebar ka style */
+        #sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        /* iframe ka style */
+        #myIframe {
+            width: calc(100% - 200px); /* Sidebar ko chhod ke full width rakho */
+            height: 100vh;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-left: 200px; /* Sidebar ke width ke barabar left margin */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <button id="button1" data-src="3(alrt-prompt).html">Content 1</button>
+        <button id="button2" data-src="4(inner-html).html">Content 2</button>
+        <button id="button3" data-src="5(assign-op).html">Content 3</button>
+        <button id="button4" data-src="6(comp&logical_op).html">Content 4</button>
+      </div>
+
+   
+
+      <iframe id="myIframe" src="INTRO.html"></iframe>
+      
+
+      <script>
+        const buttons = document.querySelectorAll('.sidebar button');
+const iframe = document.getElementById('myIframe');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const targetSrc = button.dataset.src;
+    iframe.src = targetSrc;
+  });
+});
+
+      </script>
+</body>
+</html>

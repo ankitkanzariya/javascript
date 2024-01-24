@@ -8,6 +8,17 @@
 <body>
     <h5>function and array</h5>
 
+    <p><b>
+        &lt;script&gt; <br>  let book = ["hindi","english","gujrati","punjabi","sanskrit"];  <br>  let booklength = book.length;  <br> console.log(booklength); <br>
+        document.write(booklength); <br>  for(i = 0; i < booklength; i++){     <br>            
+            console.log(`element ${i} is ${book[i]} \n `); <br>
+        } <br>
+
+        &lt;/script&gt;
+
+    </b></p>
+    
+<hr><hr>
 
     <script>
 
@@ -17,12 +28,15 @@
         
         // book.lenght is a function ---- j book array ma ktla elements 6 a count kri k 6
 
-        let booklength = book.length;       
+        let booklength = book.length;  
+        document.write(`your bbok is ${book}`);
         console.log(booklength);
+
 
         //loop chalavi ne joi skaay kyo elemnt array ma ky position a 6...
 
-        for(i = 0; i < booklength; i++){                
+        for(i = 0; i < booklength; i++){         
+            document.write(`element ${i} is ${book[i]} \n `);       
             console.log(`element ${i} is ${book[i]} \n `);
         }
 

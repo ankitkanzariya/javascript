@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Sidebar ka style */
+        #sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        /* iframe ka style */
+        #myIframe {
+            width: calc(100% - 200px); /* Sidebar ko chhod ke full width rakho */
+            height: 100vh;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-left: 200px; /* Sidebar ke width ke barabar left margin */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar ke saath clickable buttons -->
+    <div id="sidebar">
+        <button onclick="changeContent('intro.html')">INTRO</button><br>
+        <button onclick="changeContent('3(alrt-prompt).html')">3-alert-prompt</button><br>
+        <button onclick="changeContent('4(inner-html).html')">4-inner.html</button><br>
+
+        <button onclick="changeContent('3(alrt-prompt).html')">3-alert-prompt</button><br>
+        <button onclick="changeContent('4(inner-html).html')">4-inner.html</button><br>
+
+        <!-- Jitne bhi buttons chahiye, unhein yahan add karo -->
+    </div>
+5(assign-op).html
+    <!-- iframe ke saath content area -->
+    <iframe id="myIframe" src="INTRO.html"></iframe>
+    <iframe id="myIframe" src="3(alrt-prompt).html"></iframe>
+    <iframe id="myIframe" src="4(inner-html).html"></iframe>
+    <iframe id="myIframe" src="5(assign-op).html"></iframe>
+    <iframe id="myIframe" src="6(comp&logical_op).html"></iframe>
+    <iframe id="myIframe" src="7(if-else).html"></iframe>
+    <iframe id="myIframe" src="8(ternory_oppretor.html"></iframe>
+    <iframe id="myIframe" src="9(missshale-opretor).html"></iframe>
+    <iframe id="myIframe" src="10(switch).html"></iframe>
+
+    <script>
+        // JavaScript to change the content of the iframe based on the button clicked
+        function changeContent(page) {
+            var iframe = document.getElementById('myIframe');
+            iframe.src = page; // Button click ke anusar iframe ke source ko update karo
+        }
+    </script>
+
+</body>
+</html>
